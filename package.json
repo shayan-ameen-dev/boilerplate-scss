@@ -1,0 +1,31 @@
+{
+  "name": "default-starter-css",
+  "version": "1.0.0",
+  "description": "default starter for css.",
+  "scripts": {
+    "build:css": "postcss styles/main.css -o public/css/style.css",
+    "watch:css": "postcss styles/main.css -o public/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shayan-ameen-dev/default-starter-css.git"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "Shayan Ameen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shayan-ameen-dev/default-starter-css/issues"
+  },
+  "homepage": "https://github.com/shayan-ameen-dev/default-starter-css#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "cssnano": "^5.1.13",
+    "postcss": "^8.4.18",
+    "postcss-cli": "^10.0.0",
+    "stylelint": "^14.14.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^29.0.0"
+  }
+}
