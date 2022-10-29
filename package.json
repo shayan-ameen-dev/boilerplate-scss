@@ -1,40 +1,45 @@
 {
-  "name": "default-starter-css",
+  "name": "boilerplate-scss",
   "version": "1.0.0",
-  "description": "default starter for css.",
+  "description": "",
+  "main": "main.js",
   "scripts": {
-    "build:pcss": "postcss src/pcss/main.pcss -o public/css/style.css",
-    "watch:pcss": "postcss src/pcss/main.pcss -o public/css/style.css -w",
+    "dev": "sass ./scss/main.scss ./css/styles.css --watch & npm run live",
+    "build": "npm run lint && npm run format && npm run sass && npm run postcss",
+    "lint": "stylelint \"**/*.scss\"",
     "format": "prettier --write --ignore-unknown .",
+    "postcss": "postcss ./css/styles.css --replace",
+    "sass": "sass ./scss/main.scss ./css/styles.css",
+    "live": "live-server",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*.pcss": "stylelint **/*.pcss",
+    "**/*.scss": "stylelint \"**/*.scss\"",
     "**/*": "prettier --write --ignore-unknown"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shayan-ameen-dev/default-starter-css.git"
+    "url": "git+https://github.com/shayan-ameen-dev/natours.git"
   },
-  "keywords": [
-    "css"
-  ],
+  "keywords": [],
   "author": "Shayan Ameen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shayan-ameen-dev/default-starter-css/issues"
+    "url": "https://github.com/shayan-ameen-dev/natours/issues"
   },
-  "homepage": "https://github.com/shayan-ameen-dev/default-starter-css#readme",
+  "homepage": "https://github.com/shayan-ameen-dev/natours#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.12",
-    "cssnano": "^5.1.13",
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "live-server": "^1.2.2",
     "postcss": "^8.4.18",
     "postcss-cli": "^10.0.0",
     "prettier": "2.7.1",
+    "sass": "^1.55.0",
     "stylelint": "^14.14.0",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-standard": "^29.0.0"
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^6.0.0"
   }
 }

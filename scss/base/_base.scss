@@ -1,0 +1,33 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: $gray-100;
+  color: $gray-900;
+}
+
+a {
+  color: $primary-500;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+img:not(.logo) {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
