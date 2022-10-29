@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "default starter for css.",
   "scripts": {
-    "build:css": "postcss styles/main.css -o public/css/style.css",
-    "watch:css": "postcss styles/main.css -o public/css/style.css -w"
+    "build:pcss": "postcss src/pcss/main.pcss -o public/css/style.css",
+    "watch:pcss": "postcss src/pcss/main.pcss -o public/css/style.css -w",
+    "format": "prettier --write --ignore-unknown .",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*.pcss": "stylelint **/*.pcss",
+    "**/*": "prettier --write --ignore-unknown"
   },
   "repository": {
     "type": "git",
@@ -22,8 +28,11 @@
   "devDependencies": {
     "autoprefixer": "^10.4.12",
     "cssnano": "^5.1.13",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "postcss": "^8.4.18",
     "postcss-cli": "^10.0.0",
+    "prettier": "2.7.1",
     "stylelint": "^14.14.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^29.0.0"
