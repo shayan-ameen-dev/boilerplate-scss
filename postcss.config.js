@@ -1,3 +1,7 @@
 module.exports = {
-  plugins: [require("autoprefixer"), require("cssnano")],
+  plugins: [
+    require("cssnano")({
+      preset: "advanced",
+    }),
+  ],
 };
